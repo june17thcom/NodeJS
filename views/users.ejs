@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사용자 목록</title>
+  </head>
+  <body>
+    <h2>사용자 목록</h2>
+    <!--스프링엔 json뿐만 아니라 타임리프 형식도 있는데, 여기선 다른 템플릿 엔진을 통해 구현된다. 
+    fast Api -->
+    <ul>
+      <% users.forEach(function (user) { %>
+      <li><%=user%></li>
+      <%});%>
+    </ul>
+  </body>
+</html>
