@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+  </head>
+  <body>
+    <h2>로그인</h2>
+      <p>아이디: <input type="text" name="userid" id="userid" /></p>
+      <p>비번: <input type="text" name="userpw" id="userpw" /></p>
+      <p><button id="btn">로그인</button></p>
+      <script>
+        const btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        //const userid = document.getElementById("userid");
+      const userid = document.getElementById("userid").value;
+      //const userpw = document.getElementById("userpw");
+      const userpw = document.getElementById("userpw").value;
+        fetch(`http://127.0.0.1:3000/login1?userid=${userid}&{userpw}=${userpw}`)
+        .then((res) => res.text())
+        .then((data) => {console.log("서버 응답: "+data);})
+        .catch((err) => {console.log("에러 발생", err);});});
+        /*{
+      if (!res.ok) {
+        // 서버의 답변이 200(정상)이 아닐 시
+        throw new Error("로그인 실패");
+      }*/
+      /*
+        req.query.userid = JSON.stringify(userid);
+        req.query.userpw = JSON.stringify(userpw);
+        return response.json();
+      });
+      
+    })
+    .catch((error) => {
+      console.log("에러가 발생했습니다.");
+    });
+    */
+      </script>
+</script>
+</body>
+</html>
+

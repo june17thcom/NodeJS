@@ -1,17 +1,23 @@
 {
   "name": "nodejs",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "start": "node 6_json.js",
-    "dev": "nodemon 6_json.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "dev": "nodemon 15_routing.mjs"
   },
   "keywords": [],
-  "description": ""
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
 }
